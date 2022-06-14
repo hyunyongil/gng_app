@@ -1,6 +1,10 @@
 # gng_app
 
+<<<<<<< HEAD
 my first Flutter project.
+=======
+first Flutter project.
+>>>>>>> 3321e80714b8ecc2c677f1254c5994b466e08380
 
 ## Getting Started
 

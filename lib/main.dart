@@ -63,6 +63,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    DateTime date = DateTime.now();
+    String datetime = date.toString().substring(0, 19);
     // This method is rerun every time setState is called, for instance as done
     // by the _incrementCounter method above.
     //
@@ -95,6 +97,9 @@ class _MyHomePageState extends State<MyHomePage> {
           // horizontal).
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            Text(
+              '클릭한 마지막 시간: $datetime',
+            ),
             const Text(
               '당신이 "+"버튼을 클릭한 횟수:',
             ),
