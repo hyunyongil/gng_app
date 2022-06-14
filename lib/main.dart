@@ -101,7 +101,7 @@ class _MyHomePageState extends State<MyHomePage> {
               '클릭한 마지막 시간: $datetime',
             ),
             const Text(
-              '당신이 "+"버튼을 클릭한 횟수:',
+              '당신이 "+" 버튼을 클릭한 횟수:',
             ),
             Text(
               '$_counter',
