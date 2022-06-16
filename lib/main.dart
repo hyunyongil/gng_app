@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Flutter Demo'),
+          title: Text('Flutter 테스트 앱'),
         ),
         body: HomeContent(),
       ),
@@ -25,39 +25,33 @@ class HomeContent extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
         child: Container(
-          child: const Text('我是一个文本我是一个文本我是一个文本我是一个文本我是一个文本我是一个文本',
-              textAlign: TextAlign.left,
-              overflow: TextOverflow.ellipsis,
-              maxLines: 2,
-              textScaleFactor: 1.8,
-              style: TextStyle(
-                  fontSize: 16.0,
-                  color: Colors.red,
-                  fontWeight: FontWeight.w800,
-                  fontStyle: FontStyle.italic,
-                  decoration: TextDecoration.lineThrough,
-                  decorationColor: Colors.white,
-                  decorationStyle: TextDecorationStyle.dashed,
-                  letterSpacing: 5.0)),
-          height: 300.0,
-          width: 300.0,
-          decoration: BoxDecoration(
-            color: Colors.yellow,
-            border: Border.all(
-              color: Colors.blue, 
-              width: 2.0
+          child: ClipOval(
+            // child: Image.network(
+            //   'https://avatars.githubusercontent.com/u/16322601?v=4',
+            //   width: 100,
+            //   height: 100,
+            //   fit:BoxFit.cover
+            // ),
+            child: Image.asset(
+              'images/1.jpg',
+              width: 100,
+              height: 100,
+              fit:BoxFit.cover
             ),
-            borderRadius: const BorderRadius.all(
-              Radius.circular(10)
-            )
           ),
-          //padding: EdgeInsets.fromLTRB(10,30,5,0),
-          padding: EdgeInsets.all(10),
-          margin: EdgeInsets.all(10),
-          //transform: Matrix4.translationValues(100, 0, 0)
-          //transform: Matrix4.rotationZ(-0.3),
-          //transform: Matrix4.diagonal3Values(1.2, 1, 1),
-          alignment: Alignment.topLeft,
+          // height: 300,
+          // width: 300,
+          // decoration: BoxDecoration(
+          //   color: Colors.black12,
+          //   // borderRadius: BorderRadius.all(
+          //   //   Radius.circular(150)
+          //   // ),
+          //   borderRadius: BorderRadius.circular(150),
+          //   image: const DecorationImage(
+          //     image: NetworkImage("https://avatars.githubusercontent.com/u/16322601?v=4"),
+          //     fit: BoxFit.cover              
+          //   )
+          // ),
     ));
   }
 }
