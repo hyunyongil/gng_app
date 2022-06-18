@@ -22,19 +22,20 @@ class MyApp extends StatelessWidget {
 }
 
 class HomeContent extends StatelessWidget {
-    //自定义方法
-  Widget _getListData(context,index){
-    return ListTile(
-      leading: Image.network(listData[index]["imageUrl"]),
-      title: Text(listData[index]["title"]),
-      subtitle: Text(listData[index]["author"]),
-    );
+  //自定义方法
+  List<Widget> _getData(){
+    List<Widget> list = [];
+    for (int i = 0; i < 20; i++) { 
+      list.add(ListTile(
+        title: Text("我是$i列表")
+      ));
+    }
+    return list.toList();
   }
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      itemCount: listData.length,
-      itemBuilder: _getListData
+    return ListView( 
+      children: this._getData()
     );
   }
 }
