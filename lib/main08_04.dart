@@ -22,8 +22,19 @@ class MyApp extends StatelessWidget {
 }
 
 class HomeContent extends StatelessWidget {
+    //自定义方法
+  Widget _getListDatas(context,index){
+    return ListTile(
+      leading: Image.network(listData[index]["imageUrl"]),
+      title: Text(listData[index]["title"]),
+      subtitle: Text(listData[index]["author"]),
+    );
+  }
   @override
   Widget build(BuildContext context) {
-    return Text('你好 Flutter');
+    return ListView.builder(
+      itemCount: listData.length,
+      itemBuilder: _getListDatas
+    );
   }
 }
