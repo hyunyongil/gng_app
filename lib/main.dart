@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 
 void main() {
   runApp(MyApp());
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
         ),
         body: HomeContent(),
       ),
-      theme: ThemeData(primarySwatch: Colors.yellow),
+      theme: ThemeData(primarySwatch: Colors.blueGrey),
     );
   }
 }
@@ -23,35 +24,47 @@ class MyApp extends StatelessWidget {
 class HomeContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(
-        child: Container(
-          child: ClipOval(
-            // child: Image.network(
-            //   'https://avatars.githubusercontent.com/u/16322601?v=4',
-            //   width: 100,
-            //   height: 100,
-            //   fit:BoxFit.cover
-            // ),
-            child: Image.asset(
-              'images/1.jpg',
-              width: 100,
-              height: 100,
-              fit:BoxFit.cover
+    return Container( 
+      height: 180,
+      child: ListView(
+        scrollDirection: Axis.horizontal,
+        children: [
+          Container(
+            width: 180,
+            color:Colors.red
+          ),
+          Container(
+            width: 180,    
+            color:Colors.orange,
+            child: ListView(
+              children: [
+                Image.network("https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201504%2F07%2F20150407H1101_S2nLi.jpeg&refer=http%3A%2F%2Fb-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1658110424&t=2e95a9c7dddb579d259e4082f6833fab"),
+                Text("我是一个文本")
+              ],
             ),
           ),
-          // height: 300,
-          // width: 300,
-          // decoration: BoxDecoration(
-          //   color: Colors.black12,
-          //   // borderRadius: BorderRadius.all(
-          //   //   Radius.circular(150)
-          //   // ),
-          //   borderRadius: BorderRadius.circular(150),
-          //   image: const DecorationImage(
-          //     image: NetworkImage("https://avatars.githubusercontent.com/u/16322601?v=4"),
-          //     fit: BoxFit.cover              
-          //   )
-          // ),
-    ));
+          Container(
+            width: 180,      
+            color:Colors.yellow
+          ),
+          Container(
+            width: 180,       
+            color:Colors.green
+          ),
+          Container(
+            width: 180,      
+            color:Colors.blue
+          ),
+          Container(
+            width: 180,      
+            color:const Color.fromRGBO(25, 25, 112, 1)
+          ),
+          Container(
+            width: 180,      
+            color:Colors.purple
+          ),
+        ],
+      )
+    );
   }
 }
