@@ -45,9 +45,8 @@ class IconContainer extends StatelessWidget {
     return Container(
       height: 100.0,
       width: 100.0,
-      color: this.color,
-      child:
-          Center(child: Icon(this.icon, size: this.size, color: Colors.white)),
+      color: color,
+      child: Center(child: Icon(icon, size: size, color: Colors.white)),
     );
   }
 }
