@@ -23,14 +23,10 @@ class LayoutDemo extends StatelessWidget {
           children: [
             Expanded(
               child: Container(
-                height: 180,
-                color:Colors.black,
-                child: Text(
-                  '你好Flutter',
-                  style: TextStyle(color:Colors.white) 
-                  
-                )
-              ),
+                  height: 180,
+                  color: Colors.black,
+                  child:
+                      Text('你好Flutter', style: TextStyle(color: Colors.white))),
             )
           ],
         ),
@@ -42,9 +38,8 @@ class LayoutDemo extends StatelessWidget {
               child: Container(
                 height: 180,
                 child: Image.network(
-                'https://www.itying.com/images/flutter/2.png',
-                fit:BoxFit.cover
-              ),
+                    'https://www.itying.com/images/flutter/2.png',
+                    fit: BoxFit.cover),
               ),
             ),
             SizedBox(width: 10),
@@ -52,23 +47,20 @@ class LayoutDemo extends StatelessWidget {
               flex: 1,
               child: Container(
                 height: 180,
+                //Column
                 child: ListView(
                   children: [
                     Container(
-                      height: 85,
-                      child: Image.network(
-                      'https://www.itying.com/images/flutter/3.png',
-                      fit:BoxFit.cover
-                      )
-                    ),
-                    SizedBox(height:10),
+                        height: 85,
+                        child: Image.network(
+                            'https://www.itying.com/images/flutter/3.png',
+                            fit: BoxFit.cover)),
+                    SizedBox(height: 10),
                     Container(
-                      height: 85,
-                      child: Image.network(
-                      'https://www.itying.com/images/flutter/4.png',
-                      fit:BoxFit.cover
-                      )
-                    )
+                        height: 85,
+                        child: Image.network(
+                            'https://www.itying.com/images/flutter/4.png',
+                            fit: BoxFit.cover))
                   ],
                 ),
               ),
