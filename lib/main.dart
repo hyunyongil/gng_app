@@ -27,23 +27,27 @@ class HomeContent extends StatelessWidget {
   Widget _getData(context, index) {
     return Center(
       child: Container(
+        padding: EdgeInsets.only(bottom: 10),
         child: Stack(
-          children: [
-            Positioned(
+          children: <Widget>[
+            Align(
+              alignment: Alignment.bottomCenter,
               child: Image.network(
                 listData[index]['imageUrl'],
                 fit: BoxFit.cover,
               ),
             ),
-            Positioned(
-              bottom: 10,
-              left: 140,
-              child: Text(listData[index]['title'],
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                      fontSize: 14,
-                      color: Colors.white,
-                      fontWeight: FontWeight.w600)),
+            Align(
+              alignment: Alignment.bottomCenter,
+              child: Container(
+                margin: EdgeInsets.only(top: 260),
+                child: Text(listData[index]['title'],
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        fontSize: 16,
+                        color: Colors.white,
+                        fontWeight: FontWeight.w600)),
+              ),
             )
           ],
         ),
@@ -58,11 +62,9 @@ class HomeContent extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.all(1),
-      child: GridView.builder(
+      child: ListView.builder(
         itemCount: listData.length,
         itemBuilder: _getData,
-        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 1, crossAxisSpacing: 1, mainAxisSpacing: 1),
       ),
     );
   }
