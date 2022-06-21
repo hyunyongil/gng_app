@@ -23,49 +23,34 @@ class MyApp extends StatelessWidget {
 }
 
 class HomeContent extends StatelessWidget {
-  //自定义方法
-  Widget _getData(context, index) {
-    return Center(
-      child: Container(
-        padding: EdgeInsets.only(bottom: 10),
-        child: Stack(
-          children: <Widget>[
-            Align(
-              alignment: Alignment.bottomCenter,
-              child: Image.network(
-                listData[index]['imageUrl'],
-                fit: BoxFit.cover,
-              ),
-            ),
-            Align(
-              alignment: Alignment.bottomCenter,
-              child: Container(
-                margin: EdgeInsets.only(top: 260),
-                child: Text(listData[index]['title'],
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                        fontSize: 16,
-                        color: Colors.white,
-                        fontWeight: FontWeight.w600)),
-              ),
-            )
-          ],
-        ),
-        decoration: BoxDecoration(
-            border: Border.all(
-                color: Color.fromRGBO(233, 233, 233, 0.9), width: 1)),
-      ),
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.all(1),
-      child: ListView.builder(
-        itemCount: listData.length,
-        itemBuilder: _getData,
-      ),
+    return ListView(
+      children: listData.map((value) {
+        return Card(
+          margin: EdgeInsets.all(10),
+          child: Column(
+            children: <Widget>[
+              AspectRatio(
+                  aspectRatio: 16 / 9,
+                  child: Image.network(
+                    value["imageUrl"],
+                    fit: BoxFit.cover,
+                  )),
+              ListTile(
+                  leading: CircleAvatar(
+                    backgroundImage: NetworkImage(value["imageUrl"]),
+                  ),
+                  title: Text(value["title"]),
+                  subtitle: Text(
+                    value["description"],
+                    overflow: TextOverflow.ellipsis,
+                    maxLines: 1,
+                  ))
+            ],
+          ),
+        );
+      }).toList(),
     );
   }
 }
