@@ -31,30 +31,23 @@ class HomeContent extends StatefulWidget {
 }
 
 class _HomeContentState extends State<HomeContent> {
-  List list = ["点击添加数据"];
-  int num = 0;
-
+  int countNum = 0;
   @override
   Widget build(BuildContext context) {
-    return ListView(
+    return Column(
       children: <Widget>[
-        Column(
-          children: this.list.map((value) {
-            return ListTile(
-              title: Text(value),
-            );
-          }).toList(),
+        SizedBox(height: 200),
+        Chip(
+          label: Text("${this.countNum}"),
         ),
         SizedBox(height: 20),
         RaisedButton(
-          onPressed: () {
-            setState(() {
-              num++;
-              this.list.add('新增数据${num}');
-            });
-          },
-          child: Text("按钮"),
-        )
+            child: Text("按钮"),
+            onPressed: () {
+              setState(() {
+                this.countNum++;
+              });
+            })
       ],
     );
   }
