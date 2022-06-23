@@ -46,14 +46,28 @@ class _HomeContentState extends State<HomeContent> {
           }).toList(),
         ),
         SizedBox(height: 20),
+        Container(
+          child: RaisedButton(
+            color: Colors.blue,
+            onPressed: () {
+              setState(() {
+                num++;
+                list.add('新增数据${num}');
+              });
+            },
+            child: Text("按钮", style: TextStyle(color: Colors.white)),
+          ),
+        ),
+        SizedBox(height: 10),
         RaisedButton(
+          color: Colors.orange,
           onPressed: () {
             setState(() {
-              num++;
-              this.list.add('新增数据${num}');
+              num = 0;
+              list = ["点击添加数据"];
             });
           },
-          child: Text("按钮"),
+          child: Text("清空数据", style: TextStyle(color: Colors.white)),
         )
       ],
     );
