@@ -1,4 +1,3 @@
-// ignore_for_file: deprecated_member_use, unnecessary_this
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'res/listData.dart';
@@ -47,27 +46,31 @@ class _HomeContentState extends State<HomeContent> {
         ),
         SizedBox(height: 20),
         Container(
-          child: RaisedButton(
-            color: Colors.blue,
+          child: ElevatedButton(
+            style: ElevatedButton.styleFrom(
+                primary: Colors.blue, minimumSize: Size(100, 50)),
             onPressed: () {
               setState(() {
                 num++;
                 list.add('新增数据${num}');
               });
             },
-            child: Text("按钮", style: TextStyle(color: Colors.white)),
+            child:
+                Text("按钮", style: TextStyle(color: Colors.white, fontSize: 18)),
           ),
         ),
         SizedBox(height: 10),
-        RaisedButton(
-          color: Colors.orange,
+        ElevatedButton(
+          style: ElevatedButton.styleFrom(
+              primary: Colors.orange, minimumSize: Size(100, 50)),
           onPressed: () {
             setState(() {
               num = 0;
               list = ["点击添加数据"];
             });
           },
-          child: Text("清空数据", style: TextStyle(color: Colors.white)),
+          child:
+              Text("清空数据", style: TextStyle(color: Colors.white, fontSize: 18)),
         )
       ],
     );
