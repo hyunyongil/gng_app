@@ -17,8 +17,8 @@ class _CategoryPageState extends State<CategoryPage> {
       children: <Widget>[
         MaterialButton(
           onPressed: () {
-            Navigator.of(context).push(MaterialPageRoute(
-                builder: (context) => FormPage(title: '我是跳转传值')));
+            //Navigator.of(context).push(MaterialPageRoute(builder: (context) => FormPage(title: '我是跳转传值')));
+            Navigator.pushNamed(context, '/form');
           },
           child: Text("跳转到表单页面并传值"),
           color: Theme.of(context).colorScheme.onSurface,
