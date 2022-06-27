@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ProductPage extends StatefulWidget {
+  Map? arguments;
   ProductPage({Key? key}) : super(key: key);
 
   @override
@@ -24,9 +25,19 @@ class _ProductPageState extends State<ProductPage> {
                     arguments: {"pid": 456});
               },
               child: Text("跳转到商品详情"),
-              color: Theme.of(context).colorScheme.surface,
+              color: Theme.of(context).colorScheme.secondary,
               textTheme: ButtonTextTheme.primary,
             ),
+            SizedBox(height: 50),
+            MaterialButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/productdelete',
+                    arguments: {"pid": 871206});
+              },
+              child: Text("跳转到商品删除"),
+              color: Theme.of(context).colorScheme.error,
+              textTheme: ButtonTextTheme.primary,
+            )
           ],
         ));
   }

@@ -4,6 +4,7 @@ import '../pages/Form.dart';
 import '../pages/Search.dart';
 import '../pages/Product.dart';
 import '../pages/ProductInfo.dart';
+import '../pages/ProductDelete.dart';
 
 final routes = {
   '/': (context) => Tabs(),
@@ -11,6 +12,8 @@ final routes = {
   '/product': (context) => ProductPage(),
   '/productinfo': (context, {arguments}) =>
       ProductInfoPage(arguments: arguments),
+  '/productdelete': (context, {arguments}) =>
+      ProductDelete(arguments: arguments),
   '/search': (context, {arguments}) => SearchPage(arguments: arguments),
 };
 
