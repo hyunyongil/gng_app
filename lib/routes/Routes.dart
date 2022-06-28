@@ -9,6 +9,7 @@ import '../pages/ProductDelete.dart';
 import '../pages/user/Login.dart';
 import '../pages/user/RegisterFirst.dart';
 import '../pages/user/RegisterSecond.dart';
+import '../pages/AppBarDemo.dart';
 
 final routes = {
   '/': (context) => Tabs(),
@@ -23,6 +24,7 @@ final routes = {
   '/registerFirst': (context) => RegisterFirstPage(),
   '/registerSecond': (context) => RegisterSecondPage(),
   '/registerThird': (context) => RegisterThirdPage(),
+  '/appBarDemo': (context) => AppBarDemoPage(),
 };
 
 // ignore: prefer_function_declarations_over_variables

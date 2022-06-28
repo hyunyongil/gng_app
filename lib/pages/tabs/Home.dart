@@ -31,6 +31,16 @@ class _HomePageState extends State<HomePage> {
           color: Theme.of(context).colorScheme.primary,
           textTheme: ButtonTextTheme.primary,
         ),
+        SizedBox(height: 20),
+        MaterialButton(
+          onPressed: () {
+            //Navigator.of(context).push(MaterialPageRoute(builder: (context) => SearchPage()));
+            Navigator.pushNamed(context, '/appBarDemo');
+          },
+          child: Text("跳转到appbar"),
+          color: Theme.of(context).colorScheme.surface,
+          textTheme: ButtonTextTheme.primary,
+        ),
       ],
     );
   }

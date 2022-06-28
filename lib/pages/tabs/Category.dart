@@ -11,20 +11,85 @@ class CategoryPage extends StatefulWidget {
 class _CategoryPageState extends State<CategoryPage> {
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: <Widget>[
-        MaterialButton(
-          onPressed: () {
-            //Navigator.of(context).push(MaterialPageRoute(builder: (context) => FormPage(title: '我是跳转传值')));
-            Navigator.pushNamed(context, '/form');
-          },
-          child: Text("跳转到表单页面并传值"),
-          color: Theme.of(context).colorScheme.onSurface,
-          textTheme: ButtonTextTheme.primary,
-        ),
-      ],
-    );
+    return DefaultTabController(
+        length: 4,
+        child: Scaffold(
+          appBar: AppBar(
+            backgroundColor: Colors.black26,
+            title: Row(
+              children: <Widget>[
+                Expanded(
+                    child: TabBar(
+                  indicatorColor: Colors.orange,
+                  labelColor: Colors.orange,
+                  unselectedLabelColor: Colors.white,
+                  indicatorSize: TabBarIndicatorSize.label,
+                  tabs: <Widget>[
+                    Tab(text: "热销"),
+                    Tab(text: "推荐"),
+                    Tab(text: "查询"),
+                    Tab(text: "收藏"),
+                  ],
+                ))
+              ],
+            ),
+          ),
+          body: TabBarView(
+            children: <Widget>[
+              ListView(
+                children: [
+                  ListTile(
+                    title: Text("第一个tab"),
+                  ),
+                  ListTile(
+                    title: Text("第二个tab"),
+                  ),
+                  ListTile(
+                    title: Text("第三个tab"),
+                  ),
+                ],
+              ),
+              ListView(
+                children: [
+                  ListTile(
+                    title: Text("第四个tab"),
+                  ),
+                  ListTile(
+                    title: Text("第五个tab"),
+                  ),
+                  ListTile(
+                    title: Text("第六个tab"),
+                  ),
+                ],
+              ),
+              ListView(
+                children: [
+                  ListTile(
+                    title: Text("第四个tab3"),
+                  ),
+                  ListTile(
+                    title: Text("第五个tab"),
+                  ),
+                  ListTile(
+                    title: Text("第六个tab"),
+                  ),
+                ],
+              ),
+              ListView(
+                children: [
+                  ListTile(
+                    title: Text("第四个tab4"),
+                  ),
+                  ListTile(
+                    title: Text("第五个tab"),
+                  ),
+                  ListTile(
+                    title: Text("第六个tab"),
+                  ),
+                ],
+              )
+            ],
+          ),
+        ));
   }
 }
