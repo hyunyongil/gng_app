@@ -12,7 +12,7 @@ class _CategoryPageState extends State<CategoryPage> {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-        length: 4,
+        length: 8,
         child: Scaffold(
           appBar: AppBar(
             backgroundColor: Colors.blueGrey,
@@ -20,6 +20,7 @@ class _CategoryPageState extends State<CategoryPage> {
               children: <Widget>[
                 Expanded(
                     child: TabBar(
+                  isScrollable: true,
                   indicatorColor: Colors.orange,
                   labelColor: Colors.orange,
                   unselectedLabelColor: Colors.white,
@@ -28,6 +29,10 @@ class _CategoryPageState extends State<CategoryPage> {
                     Tab(text: "热销"),
                     Tab(text: "推荐"),
                     Tab(text: "查询"),
+                    Tab(text: "收藏"),
+                    Tab(text: "收藏"),
+                    Tab(text: "收藏"),
+                    Tab(text: "收藏"),
                     Tab(text: "收藏"),
                   ],
                 ))
@@ -66,6 +71,58 @@ class _CategoryPageState extends State<CategoryPage> {
                 children: [
                   ListTile(
                     title: Text("第四个tab3"),
+                  ),
+                  ListTile(
+                    title: Text("第五个tab"),
+                  ),
+                  ListTile(
+                    title: Text("第六个tab"),
+                  ),
+                ],
+              ),
+              ListView(
+                children: [
+                  ListTile(
+                    title: Text("第四个tab4"),
+                  ),
+                  ListTile(
+                    title: Text("第五个tab"),
+                  ),
+                  ListTile(
+                    title: Text("第六个tab"),
+                  ),
+                ],
+              ),
+              ListView(
+                children: [
+                  ListTile(
+                    title: Text("第四个tab4"),
+                  ),
+                  ListTile(
+                    title: Text("第五个tab"),
+                  ),
+                  ListTile(
+                    title: Text("第六个tab"),
+                  ),
+                ],
+              ),
+              ListView(
+                children: [
+                  ListTile(
+                    title: Text("第四个tab4"),
+                  ),
+                  ListTile(
+                    title: Text("第五个tab"),
+                  ),
+                  ListTile(
+                    title: Text("第六个tab"),
+                  ),
+                ],
+              ),
+              ListView(
+                children: [
+                  ListTile(
+                    title: Text("第四个tab4"),
                   ),
                   ListTile(
                     title: Text("第五个tab"),
