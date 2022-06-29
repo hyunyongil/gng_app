@@ -15,7 +15,7 @@ class _CategoryPageState extends State<CategoryPage> {
         length: 4,
         child: Scaffold(
           appBar: AppBar(
-            backgroundColor: Colors.black26,
+            backgroundColor: Colors.blueGrey,
             title: Row(
               children: <Widget>[
                 Expanded(
