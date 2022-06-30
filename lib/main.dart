@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       initialRoute: '/',
-      theme: ThemeData(primarySwatch: Colors.amber),
+      theme: ThemeData(primarySwatch: Colors.orange),
       // routes: {
       //   '/form': (context) => FormPage(),
       //   '/search': (context) => SearchPage(),

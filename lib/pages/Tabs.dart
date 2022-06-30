@@ -39,6 +39,83 @@ class _TabsState extends State<Tabs> {
               icon: Icon(Icons.settings), title: Text("设置")),
         ],
       ),
+      drawer: Drawer(
+        child: Column(
+          children: <Widget>[
+            Row(
+              children: <Widget>[
+                Expanded(
+                    child: UserAccountsDrawerHeader(
+                  accountName: Text(
+                    "玄泰贤",
+                    style: TextStyle(color: Colors.white),
+                  ),
+                  accountEmail: Text(
+                    "hyunyongil@naver.com",
+                    style: TextStyle(color: Colors.white),
+                  ),
+                  currentAccountPicture: CircleAvatar(
+                    backgroundImage: NetworkImage(
+                        "https://avatars.githubusercontent.com/u/16322601?v=4"),
+                  ),
+                  decoration: BoxDecoration(
+                      color: Colors.orange,
+                      image: DecorationImage(
+                          image: NetworkImage(
+                              "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic.51yuansu.com%2Fbackgd%2Fcover%2F00%2F06%2F79%2F5b68d21a7a7a6.jpg%21%2Ffw%2F780%2Fquality%2F90%2Funsharp%2Ftrue%2Fcompress%2Ftrue&refer=http%3A%2F%2Fpic.51yuansu.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1659180136&t=500ebff2a6aa816ee2fa33119f14daf7"),
+                          fit: BoxFit.cover)),
+                  otherAccountsPictures: <Widget>[
+                    Image.network(
+                        "https://www.itying.com/images/flutter/3.png"),
+                    Image.network(
+                        "https://www.itying.com/images/flutter/4.png"),
+                    Image.network(
+                        "https://www.itying.com/images/flutter/5.png"),
+                  ],
+                ))
+              ],
+            ),
+            ListTile(
+              leading: CircleAvatar(
+                child: Icon(
+                  Icons.home,
+                  color: Colors.red,
+                ),
+              ),
+              title: Text('我的空间'),
+            ),
+            Divider(),
+            ListTile(
+              leading: CircleAvatar(
+                child: Icon(
+                  Icons.people,
+                  color: Colors.blue,
+                ),
+              ),
+              title: Text('用户中心'),
+              onTap: () {
+                Navigator.of(context).pop();
+                Navigator.pushNamed(context, '/user');
+              },
+            ),
+            Divider(),
+            ListTile(
+              leading: CircleAvatar(
+                child: Icon(Icons.settings),
+              ),
+              title: Text('设置中心'),
+              onTap: () {
+                Navigator.of(context).pop();
+                Navigator.pushNamed(context, '/setting');
+              },
+            ),
+            Divider(),
+          ],
+        ),
+      ),
+      endDrawer: Drawer(
+        child: Text("右侧侧边栏"),
+      ),
     );
   }
 }
