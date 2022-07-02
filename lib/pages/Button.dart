@@ -19,6 +19,18 @@ class _ButtonPageState extends State<ButtonPage> {
           IconButton(onPressed: () {}, icon: Icon(Icons.settings))
         ],
       ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(
+          Icons.add,
+          color: Colors.black,
+          size: 40,
+        ),
+        backgroundColor: Colors.amber,
+        onPressed: () {
+          print('floatingActionButton');
+        },
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[

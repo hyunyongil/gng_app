@@ -33,12 +33,34 @@ class _TabsState extends State<Tabs> {
         iconSize: 36,
         items: [
           BottomNavigationBarItem(icon: Icon(Icons.home), title: Text("首页")),
+          //BottomNavigationBarItem(icon: Icon(Icons.message), title: Text("消息")),
           BottomNavigationBarItem(
               icon: Icon(Icons.category), title: Text("分类")),
+          //BottomNavigationBarItem(icon: Icon(Icons.card_giftcard), title: Text("分享")),
           BottomNavigationBarItem(
               icon: Icon(Icons.settings), title: Text("设置")),
         ],
       ),
+      floatingActionButton: Container(
+        height: 80,
+        width: 80,
+        padding: EdgeInsets.all(8),
+        margin: EdgeInsets.only(top: 10),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(40),
+          color: Colors.white,
+        ),
+        child: FloatingActionButton(
+          child: Icon(Icons.add),
+          onPressed: () {
+            setState(() {
+              this._currentIndex = 1;
+            });
+          },
+          backgroundColor: _currentIndex == 1 ? Colors.amber : Colors.yellow,
+        ),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       drawer: Drawer(
         child: Column(
           children: <Widget>[
