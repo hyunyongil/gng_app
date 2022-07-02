@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: '/',
+      initialRoute: '/buttonPage',
       theme: ThemeData(primarySwatch: Colors.orange),
       // routes: {
       //   '/form': (context) => FormPage(),

@@ -13,6 +13,7 @@ import '../pages/user/RegisterSecond.dart';
 import '../pages/AppBarDemo.dart';
 import '../pages/TabBarController.dart';
 import '../pages/User.dart';
+import '../pages/Button.dart';
 
 final routes = {
   '/': (context) => Tabs(),
@@ -31,6 +32,7 @@ final routes = {
   '/tabBarController': (context) => TabBarControllerPage(),
   '/user': (context) => UserPage(),
   '/setting': (context) => SettingPage(),
+  '/buttonPage': (context) => ButtonPage(),
 };
 
 // ignore: prefer_function_declarations_over_variables
