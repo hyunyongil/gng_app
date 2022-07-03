@@ -17,6 +17,7 @@ import '../pages/Button.dart';
 import '../pages/TextField.dart';
 import '../pages/Radio.dart';
 import '../pages/CheckBox.dart';
+import '../pages/FormDemo.dart';
 
 final routes = {
   '/': (context) => Tabs(),
@@ -39,6 +40,7 @@ final routes = {
   '/textfield': (context) => TextFieldDemoPage(),
   '/radiofild': (context) => RaioDemoPage(),
   '/checkboxfild': (context) => CheckBoxDemo(),
+  '/form': (context) => FormDemoPage(),
 };
 
 // ignore: prefer_function_declarations_over_variables
