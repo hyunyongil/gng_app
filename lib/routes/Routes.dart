@@ -14,6 +14,9 @@ import '../pages/AppBarDemo.dart';
 import '../pages/TabBarController.dart';
 import '../pages/User.dart';
 import '../pages/Button.dart';
+import '../pages/TextField.dart';
+import '../pages/Radio.dart';
+import '../pages/CheckBox.dart';
 
 final routes = {
   '/': (context) => Tabs(),
@@ -33,6 +36,9 @@ final routes = {
   '/user': (context) => UserPage(),
   '/setting': (context) => SettingPage(),
   '/buttonPage': (context) => ButtonPage(),
+  '/textfield': (context) => TextFieldDemoPage(),
+  '/radiofild': (context) => RaioDemoPage(),
+  '/checkboxfild': (context) => CheckBoxDemo(),
 };
 
 // ignore: prefer_function_declarations_over_variables
