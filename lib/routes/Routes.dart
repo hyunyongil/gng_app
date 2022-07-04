@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gng_app/pages/DatePickerPub.dart';
 import 'package:gng_app/pages/user/RegisterThird.dart';
 import '../pages/tabs/Setting.dart';
 import '../pages/Tabs.dart';
@@ -18,6 +19,7 @@ import '../pages/TextField.dart';
 import '../pages/Radio.dart';
 import '../pages/CheckBox.dart';
 import '../pages/FormDemo.dart';
+import '../pages/DatePicker.dart';
 
 final routes = {
   '/': (context) => Tabs(),
@@ -40,7 +42,8 @@ final routes = {
   '/textfield': (context) => TextFieldDemoPage(),
   '/radiofild': (context) => RaioDemoPage(),
   '/checkboxfild': (context) => CheckBoxDemo(),
-  '/form': (context) => FormDemoPage(),
+  '/datepicker': (context) => DatePickerDemo(),
+  '/datepickerpub': (context) => DatePickerPub(),
 };
 
 // ignore: prefer_function_declarations_over_variables
