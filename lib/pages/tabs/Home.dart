@@ -75,7 +75,7 @@ class _HomePageState extends State<HomePage> {
             onPressed: () {
               Navigator.pushNamed(context, '/datepickerpub');
             },
-            child: Text("跳转到日期演示页面2"),
+            child: Text("第三方日期插件的使用"),
             color: Theme.of(context).colorScheme.surface,
             textTheme: ButtonTextTheme.primary,
           ),
