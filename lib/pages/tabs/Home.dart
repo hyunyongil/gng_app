@@ -23,7 +23,7 @@ class _HomePageState extends State<HomePage> {
             color: Theme.of(context).colorScheme.surface,
             textTheme: ButtonTextTheme.primary,
           ),
-          SizedBox(height: 10),
+          SizedBox(height: 5),
           MaterialButton(
             child: Text("跳转到商品页面"),
             onPressed: () {
@@ -32,7 +32,7 @@ class _HomePageState extends State<HomePage> {
             color: Theme.of(context).colorScheme.primary,
             textTheme: ButtonTextTheme.primary,
           ),
-          SizedBox(height: 10),
+          SizedBox(height: 5),
           MaterialButton(
             onPressed: () {
               //Navigator.of(context).push(MaterialPageRoute(builder: (context) => SearchPage()));
@@ -42,7 +42,7 @@ class _HomePageState extends State<HomePage> {
             color: Theme.of(context).colorScheme.surface,
             textTheme: ButtonTextTheme.primary,
           ),
-          SizedBox(height: 10),
+          SizedBox(height: 5),
           MaterialButton(
             onPressed: () {
               //Navigator.of(context).push(MaterialPageRoute(builder: (context) => SearchPage()));
@@ -52,7 +52,7 @@ class _HomePageState extends State<HomePage> {
             color: Theme.of(context).colorScheme.surface,
             textTheme: ButtonTextTheme.primary,
           ),
-          SizedBox(height: 10),
+          SizedBox(height: 5),
           MaterialButton(
             onPressed: () {
               Navigator.pushNamed(context, '/form');
@@ -61,7 +61,7 @@ class _HomePageState extends State<HomePage> {
             color: Theme.of(context).colorScheme.secondary,
             textTheme: ButtonTextTheme.normal,
           ),
-          SizedBox(height: 10),
+          SizedBox(height: 5),
           MaterialButton(
             onPressed: () {
               Navigator.pushNamed(context, '/datepicker');
@@ -70,13 +70,22 @@ class _HomePageState extends State<HomePage> {
             color: Theme.of(context).colorScheme.surface,
             textTheme: ButtonTextTheme.accent,
           ),
-          SizedBox(height: 10),
+          SizedBox(height: 5),
           MaterialButton(
             onPressed: () {
               Navigator.pushNamed(context, '/datepickerpub');
             },
             child: Text("第三方日期插件的使用"),
             color: Theme.of(context).colorScheme.surface,
+            textTheme: ButtonTextTheme.primary,
+          ),
+          SizedBox(height: 5),
+          MaterialButton(
+            onPressed: () {
+              Navigator.pushNamed(context, '/swiperpage');
+            },
+            child: Text("轮播图演示"),
+            color: Theme.of(context).colorScheme.secondary,
             textTheme: ButtonTextTheme.primary,
           ),
         ],

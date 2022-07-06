@@ -20,6 +20,7 @@ import '../pages/Radio.dart';
 import '../pages/CheckBox.dart';
 import '../pages/FormDemo.dart';
 import '../pages/DatePicker.dart';
+import '../pages/Swiper.dart';
 
 final routes = {
   '/': (context) => Tabs(),
@@ -44,6 +45,7 @@ final routes = {
   '/checkboxfild': (context) => CheckBoxDemo(),
   '/datepicker': (context) => DatePickerDemo(),
   '/datepickerpub': (context) => DatePickerPub(),
+  '/swiperpage': (context) => SwiperPage(),
 };
 
 // ignore: prefer_function_declarations_over_variables
