@@ -88,6 +88,15 @@ class _HomePageState extends State<HomePage> {
             color: Theme.of(context).colorScheme.secondary,
             textTheme: ButtonTextTheme.primary,
           ),
+          SizedBox(height: 5),
+          MaterialButton(
+            onPressed: () {
+              Navigator.pushNamed(context, '/dialogpage');
+            },
+            child: Text("弹窗演示"),
+            color: Theme.of(context).colorScheme.surface,
+            textTheme: ButtonTextTheme.primary,
+          ),
         ],
       ),
     );
