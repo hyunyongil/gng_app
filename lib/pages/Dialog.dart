@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:gng_app/components/MyDialog.dart';
 
 class DialogPage extends StatefulWidget {
   DialogPage({Key? key}) : super(key: key);
@@ -149,6 +150,19 @@ class _DialogPageState extends State<DialogPage> {
                 child: Text('toast-fluttertoast第三方库'),
                 onPressed: _toast,
               ),
+              MaterialButton(
+                onPressed: () {
+                  //Navigator.pushNamed(context, '/form');
+                  showDialog(
+                      context: context,
+                      builder: (context) {
+                        return MyDialog(title: "关于我们", content: "这里是内容部分");
+                      });
+                },
+                child: Text("显示自定义Dialog"),
+                color: Theme.of(context).colorScheme.secondary,
+                textTheme: ButtonTextTheme.normal,
+              )
               // fluttertoast
             ],
           ),
